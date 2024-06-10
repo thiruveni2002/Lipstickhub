@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lipstick Shades</title>
+    <link rel="stylesheet" href="shade.css">
+</head>
+<body>
+    <header>
+        <h1>Lipstick Shades</h1>
+    </header>
+    <main>
+        <section id="shades">
+            <div class="shade">
+           <img src="img shade/red_lipstick.jpg">
+                <h2>Red Lipstick</h2>
+                 <button onclick="selectShade('Red Lipstick', 'Bold and vibrant red color', '$10', 'High','Warm, cool, or neutral undertones','Long-lasting formula','Nourishing with vitamin E and shea butter','Smooth and creamy texture','Fragrance-free','Elegant bullet design')">Select</button> <br><br>
+           <img src="img shade/orange_lipstick.jpg">
+                <h2>Orange Lipstick</h2>
+                 <button onclick="selectShade('Orange Lipstick', 'Bold and vibrant orange color', '$12', 'High','Warm undertones to complement various skin tones','Long-lasting formula for extended wear','Enriched with moisturizing agents like mango butter and vitamin C','Smooth and creamy texture for effortless application','Light citrusy fragrance for a refreshing experience','Sleek and vibrant packaging design')">Select</button><br><br>
+           <img src="img shade/blue_lipstick.jpg">
+                <h2>Blue Lipstick</h2>
+                 <button onclick="selectShade('Blue Lipstick', 'Shades ranging from sky blue to navy', '$15', 'High','Neutral undertones for versatility across different skin tones','Long-lasting formula with fade-resistant color','Formulated with hydrating ingredients like shea butter and coconut oil','Creamy texture glides smoothly onto lips for even coverage','Fragrance-free formula suitable for sensitive skin','Modern and edgy packaging design for a statement look')">Select</button><br><br>
+
+</div>
+            </div>
+            <div class="shade">
+                <img src="img shade/pink_lipstick.png">
+                <h2>Pink Lipstick</h2>
+                <button onclick="selectShade('Pink Lipstick', 'Soft and romantic pink shade', '$8', 'Medium','Warm, cool, or neutral shades','Long-wearing with fade-resistant color','Hyaluronic acid and jojoba oil','Smooth and lightweight texture','Light and pleasant fragrance','Sleek and modern design')">Select</button><br><br>
+           <img src="img shade/shine_lipstick.jpg">
+                <h2>Shine Lipstick</h2>
+                 <button onclick="selectShade('Shine Lipstick', 'High-shine finish with a glossy and luminous effect', '$10', 'High','Neutral undertones to complement various complexions','Provides a burst of hydration with a comfortable wear','Nourishing oils like argan oil and jojoba oil for moisturized lips','Lightweight and non-sticky formula for effortless application','Light and sweet fragrance for a pleasant application experience','Sleek and sophisticated packaging with a reflective finish')">Select</button><br><br>
+           <img src="img shade/green_lipstick.jpg">
+                <h2>Green Lipstick</h2>
+                 <button onclick="selectShade('Green Lipstick', 'Shades ranging from emerald to mint', '$14', 'High','Cool undertones suitable for a variety of skin tones','Long-wearing formula with minimal touch-ups required','Infused with nourishing ingredients like avocado oil and matcha extract','Smooth and velvety texture for easy application','Light herbal scent for a natural touch','Eco-friendly packaging made from recycled materials')">Select</button><br><br>
+
+ </div>
+            <div class="shade">
+                <img src="img shade/peach_lipstick.jpg">
+                <h2>Peach Lipstick</h2>
+                <button onclick="selectShade('Peach Lipstick', 'Warm and natural peachy tone', '$12', 'High','Warm peachy shades','Long-lasting and comfortable wear','Avocado oil and shea butter','Creamy and moisturizing','Light fruity aroma','Chic and compact design')">Select</button><br><br>
+            <img src="img shade/light_lipstick.png">
+                <h2>Light Lipstick</h2>
+                 <button onclick="selectShade('Light Lipstick', 'Soft matte or satin finish with delicate pink shades', '$12', 'High','Neutral to cool undertones suitable for a wide range of skin tones','Long-wearing formula with a comfortable feel','Infused with moisturizing ingredients like hyaluronic acid and rose extract','Smooth and silky texture','Subtle floral fragrance for a delightful experience','Elegant and feminine packaging design')">Select</button><br><br>
+           <img src="img shade/purple_lipstick.jpg">
+                <h2>Purple Lipstick</h2>
+                 <button onclick="selectShade('Purple Lipstick', 'Shades ranging from lavender to deep plum', '$13', 'High','Cool undertones for a bold and edgy look','Long-lasting formula with minimal fading','Enriched with antioxidants like vitamin E and acai berry extract','creamy texture','Light fruity or floral fragrance for a pleasant experience','Modern and sleek packaging design with a pop of color')">Select</button><br><br>
+
+</div>
+        </section>
+        <aside id="selected-shade">
+            <h2>Selected Shade</h2>
+            <div id="selected-shade-info">
+                
+    <p>No shade selected</p>
+</div>
+    
+
+            </div>
+        </aside>
+    </main>
+   
+     <script>
+       
+ function selectShade(shadeName, details,price,quality,undertone,longevity,ingredients,application,scent,packaging) {
+        var selectedShadeInfo = document.getElementById("selected-shade-info");
+        var imageUrl = "";
+
+        // Determine the image URL based on the shade name
+        switch (shadeName) {
+            case "Red Lipstick":
+                imageUrl = "img shade/red_lipstick.jpg";
+                break;
+            case "Pink Lipstick":
+                imageUrl = "img shade/pink_lipstick.png";
+                break;
+            case "Peach Lipstick":
+                imageUrl = "img shade/peach_lipstick.jpg";
+                break;
+            case "Orange Lipstick":
+                imageUrl = "img shade/orange_lipstick.jpg";
+                break;
+            case "Shine Lipstick":
+                imageUrl = "img shade/shine_lipstick.jpg";
+                break;
+            case "Light Lipstick":
+                imageUrl = "img shade/light_lipstick.png";
+                break;
+            case "Blue Lipstick":
+                imageUrl = "img shade/blue_lipstick.jpg";
+                break;
+            case "Green Lipstick":
+                imageUrl = "img shade/green_lipstick.jpg";
+                break;
+            case "Purple Lipstick":
+                imageUrl = "img shade/purple_lipstick.jpg";
+                break;
+            default:
+                // Default to a placeholder image if the shade name is not recognized
+                imageUrl = "img shade/placeholder.jpg";
+        }
+
+            selectedShadeInfo.innerHTML = `
+                <p>You have selected: ${shadeName}</p>
+                <img src="${imageUrl}" alt="${shadeName}">
+                <p>Details: ${details}</p>
+                <p>Price: ${price}</p>
+                <p>Quality: ${quality}</p>
+                <p>Undertone: ${undertone}</p>
+                <p>Longevity: ${longevity}</p>
+                <p>Ingredients: ${ingredients}</p>
+                <p>Application: ${application}</p>
+                <p>Scent: ${scent}</p>
+                <p>Packaging: ${packaging}</p>
+                <button onclick="buyNow('${shadeName}', '${price}')">Buy Now</button>
+            `;
+}
+function buyNow(shadeName, price) {
+            alert(`You have chosen to buy the ${shadeName} for ${price}.`);
+            
+        }
+        
+    </script>
+
+
+</div>
+</body>
+</html>
