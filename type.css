@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightcoral;
+}
+
+.lipstick-types {
+    padding: 20px;
+    background-color:lightcoral;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.types {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.type-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    max-width: 200px;
+    text-align: center;
+}
+
+.type-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.type-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.type-description {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #666;
+}
