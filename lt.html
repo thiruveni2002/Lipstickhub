@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lip Tints</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: lightcoral;
+    }
+    .lip-tint-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .lip-tint {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .lip-tint img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .buy-now-button {
+      background-color: lightsalmon;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .buy-now-button:hover {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+
+<div class="lip-tint-container">
+  <div class="lip-tint">
+    <img src="img tool/s tint.jpg" alt="Lip Tint 1">
+    <h2>Strawberry Lip Tint</h2>
+    <p>Price: $14</p>
+    <button class="buy-now-button" onclick="window.location.href='https://example.com/lip-tint1'">Buy Now</button>
+  </div>
+
+  <div class="lip-tint">
+    <img src="img tool/g tint.jpg" alt="Lip Tint 2">
+    <h2>Grape Lip Tint</h2>
+    <p>Price: $16</p>
+    <button class="buy-now-button" onclick="window.location.href='https://example.com/lip-tint2'">Buy Now</button>
+  </div>
+
+  <div class="lip-tint">
+    <img src="img tool/w tint.jpg" alt="Lip Tint 3">
+    <h2>Watermelon Lip Tint</h2>
+    <p>Price: $12</p>
+    <button class="buy-now-button" onclick="window.location.href='https://example.com/lip-tint3'">Buy Now</button>
+  </div>
+
+  
+</div>
+
+</body>
+</html>
